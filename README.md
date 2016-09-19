@@ -41,13 +41,10 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 
 You will need to make sure you have installed and working the following
 
-```
-PowerDNS (with MySQL backend)
-Nginx (or Apache) webserver
-MySQL
-php5-idn
-php5-intl package / php5-idn
-```
+* PowerDNS (with MySQL backend)
+* Nginx (or Apache) webserver
+* MySQL
+* php5-intl package / php5-idn
 
 ### Installing
 
