@@ -52,17 +52,17 @@ Read the INSTALL.md in the install folder
 
 ## Built With
 
-PHP
+**PHP**
 * [Fat Free Framework](https://fatfreeframework.com)
 
-JS
+**JS**
 * [JQuery](https://jquery.com/)
 * [PNotify](https://sciactive.com/pnotify/)
 * [Datatables](https://datatables.net)
 * [Select2](select2.github.io)
 * [X-Editable](https://vitalets.github.io/x-editable/)
 
-HTML/CSS
+**HTML/CSS**
 * [Bootstrap](https://getbootstrap.com)
 * [AdminLTE](https://almsaeedstudio.com/)
 
