@@ -4,11 +4,11 @@ This assumes you have a reasonable knowledge of what you are doing.. ;)
 
 ## Install
 
-Make sure you have everything you need installed before you start (see pre-reqs in the README.md file). Create a new mysql user that has access to your PDNS database (bits in **bold** are the bits you need to change).
+Make sure you have everything you need installed before you start (see pre-reqs in the README.md file). Create a new mysql user that has access to your PDNS database (bits in **<CAPS>** are generally the bits you need to change).
 
 ```
 mysql -u root -p
-GRANT ALL PRIVILEGES ON <b>YOURPDNSDATABASE</b>.* To '<b>user</b>'@'localhost' IDENTIFIED BY '<b>password</b>';
+GRANT ALL PRIVILEGES ON <YOURPDNSDATABASE>.* To '<USER>'@'localhost' IDENTIFIED BY '<PASSWORD>';
 FLUSH PRIVILEGES;
 ```
 Take note of your username and password, you will require them.
@@ -17,7 +17,7 @@ Take note of your username and password, you will require them.
 install.sql contains the new tables that the web interface creates. I've seperated them out by adding a w_ at the start of the table name, so if you decide to ditch the web interface you can easily and safely delete the tables. **Before adding these tables please back up your database first!**
 
 ````
-mysql -u <i>useryoujustcreated</i> <b>yourpdnsdatabase</b> < install.sql
+mysql -u <USERYOUJUSTCREATED> <YOURPDNSDATABASE> < install.sql
 ````
 
 ###Time to upload The webinterface.
@@ -28,18 +28,18 @@ The **lib** folder and **config.ini** need to be located out of your website dir
 
 ###Edit config.ini
 
-You'll need to update the values in config.ini for it to work, you'll need your PowerDNS database, the username and password you created in an earlier step (I told you to note it down). You will also need to know the address of your MySQL server (the default options in the config file *should* work!). Again, bits in **bold** are the bits you need to change.
+You'll need to update the values in config.ini for it to work, you'll need your PowerDNS database, the username and password you created in an earlier step (I told you to note it down). You will also need to know the address of your MySQL server (the default options in the config file *should* work!). Again, bits like  **<THIS>** are the bits you need to change.
 ````
-DB_DETS = "mysql:host=localhost;port=3306;dbname=**<YOUR PDNS DB NAME>**"
-DB_HOST        = **localhost**
-DB_NAME        = **<YOUR PDNS DNS NAME>**
-DB_USER        = **<YOUR PNDS DB USER>**
-DB_PSWD        = **<YOUR PNDS DB PASSWORD>**
-DB_PORT        = **3306**
+DB_DETS = "mysql:host=localhost;port=3306;dbname=<YOUR PDNS DB NAME>"
+DB_HOST        = localhost
+DB_NAME        = <YOUR PDNS DNS NAME>
+DB_USER        = <YOUR PNDS DB USER>
+DB_PSWD        = <YOUR PNDS DB PASSWORD>
+DB_PORT        = 3306
 ````
 Now the cosmetic stuff, SITENAME is the name of your website, SITENAMEHTML is if you want to fancy up the sitename a little bit (used at the top of the menu). SITENAMEHTMLSHORT is a smaller version of SITENAMEHTML used when viewed on a mobile (smaller) device. The rest is fairly self explanatory.
 ````
-SITENAME = "**Your DNS**"
+SITENAME = "Your DNS"
 SITENAMEHTML = "<b>Your</b>DNS"
 SITENAMEHTMLSHORT = "<b>y</b>DNS"
 SITEURL = "https://your.url/"
