@@ -37,6 +37,11 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 #### Domain User
 - [ ] Edit Domain
 
+#### Other Bits
+- [ ] Password Reset
+- [ ] PDNS Stats
+- [ ] Domain and Record Limits (Per User and/or Per Domain)
+
 ### Prerequisities
 
 You will need to make sure you have installed and working the following
@@ -65,7 +70,7 @@ Read the INSTALL.md in the install folder
 **HTML/CSS**
 * [Bootstrap](https://getbootstrap.com)
 * [AdminLTE](https://almsaeedstudio.com/)
-
+* [Font Awesome](http://fontawesome.io/)
 ## Credit To
 
 * **Lukas Metzger** - Totally ripped some of his Javascript from his [PDNS Manager](https://pdnsmanager.lmitsystems.de/). 

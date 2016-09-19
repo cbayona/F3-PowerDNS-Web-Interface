@@ -26,6 +26,9 @@ The directory structure is pretty important in this project, there are some thin
 
 The **lib** folder and **config.ini** need to be located out of your website directory, you don't generally want people to see these, especially config.ini. So upload these outside of your webroot.
 
+##tmp Directory
+Make the tmp/ directory writeable by your webserver. It's where the template and cache files are stored (chown -R www-data:www-data tmp/ if you are on debian).
+
 ###Edit config.ini
 
 You'll need to update the values in config.ini for it to work, you'll need your PowerDNS database, the username and password you created in an earlier step (I told you to note it down). You will also need to know the address of your MySQL server (the default options in the config file *should* work!). Again, bits like  **<THIS>** are the bits you need to change.
@@ -52,6 +55,9 @@ DEFAULTSOAEXPIRE = "86400"
 DEFAULTSOARETRY = "3600"
 DEFAUTLSOATTL = "3600"
 ````
+
+####Delete install folder
+Pretty obvious what you need to do here...
 
 ###All Done!
 Simple huh? Now go visit your new website, your default login details are username: **admin@admin.com** password: **ineedchanging**
