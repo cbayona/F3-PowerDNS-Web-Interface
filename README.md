@@ -39,10 +39,10 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 
 ### Prerequisities
 
-What things you need to install the software and how to install them
+You will need to make sure you have installed and working the following
 
 ```
-PowerDNS
+PowerDNS (with MySQL backend)
 Nginx (or Apache) webserver
 MySQL
 php5-idn
