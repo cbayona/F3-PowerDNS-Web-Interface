@@ -8,7 +8,7 @@ Make sure you have everything you need installed before you start (see pre-reqs 
 
 ```
 mysql -u root -p
-GRANT ALL PRIVILEGES ON dbTest.* To '**user**'@'localhost' IDENTIFIED BY '**password**';
+GRANT ALL PRIVILEGES ON <b>YOURPDNSDATABASE</b>.* To '<b>user</b>'@'localhost' IDENTIFIED BY '<b>password</b>';
 FLUSH PRIVILEGES;
 ```
 Take note of your username and password, you will require them.
@@ -17,7 +17,7 @@ Take note of your username and password, you will require them.
 install.sql contains the new tables that the web interface creates. I've seperated them out by adding a w_ at the start of the table name, so if you decide to ditch the web interface you can easily and safely delete the tables. **Before adding these tables please back up your database first!**
 
 ````
-mysql -u *useryoujustcreated* **yourpdnsdatabase** < install.sql
+mysql -u <i>useryoujustcreated</i> <b>yourpdnsdatabase</b> < install.sql
 ````
 
 ###Time to upload The webinterface.
