@@ -1,0 +1,35 @@
+      <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li<check if="{{ @MENUACTIVE=='HOME' }}"><true> class="active"</true></check>>
+          <a href="/">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="treeview<check if="{{ @MENUACTIVE=='DOMAINS' }}"><true> active</true></check>">
+          <a href="#">
+            <i class="fa fa-globe"></i>
+            <span>Domains</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/domains"><i class="fa fa-circle-o"></i> View</a></li>
+            <li><a href="/domains/add"><i class="fa fa-circle-o"></i> Add</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="/users">
+            <i class="fa fa-users"></i>
+            <span>Users</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/users/"><i class="fa fa-circle-o"></i> View</a></li>
+            <li><a href="/users/add"><i class="fa fa-circle-o"></i> Add</a></li>
+          </ul>
+        </li>
+
+      </ul>
