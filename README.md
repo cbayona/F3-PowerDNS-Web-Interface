@@ -10,11 +10,7 @@ I decided to learn Fat Free Framework after being recommended it by a few people
 
 The aim is to provide a fully functional web interface that you can just drop onto your server and easily allow you and your customers to do all your DNSy stuff.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Todo
+## Todo
 
 Pretty much everything, currently only part of the DNS Admin stuff works, it is a work in progress.
 
@@ -25,6 +21,7 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 - [ ] Add Users
 - [ ] Edit Users
 - [ ] Delete Users
+- [ ] Assign Domain to different user
 
 #### Domain Admin
 - [ ] Add Domains
@@ -41,8 +38,9 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 - [ ] Password Reset
 - [ ] PDNS Stats
 - [ ] Domain and Record Limits (Per User and/or Per Domain)
+- [ ] Tidy Up Plugins Folder
 
-### Prerequisities
+## Prerequisities
 
 You will need to make sure you have installed and working the following
 
@@ -51,7 +49,7 @@ You will need to make sure you have installed and working the following
 * MySQL
 * php5-intl package / php5-idn
 
-### Installing
+## Installing
 
 Read the INSTALL.md in the install folder
 
@@ -63,7 +61,7 @@ Read the INSTALL.md in the install folder
 **JS**
 * [JQuery](https://jquery.com/)
 * [PNotify](https://sciactive.com/pnotify/)
-* [Datatables](https://datatables.net)
+* [DataTables](https://datatables.net)
 * [Select2](select2.github.io)
 * [X-Editable](https://vitalets.github.io/x-editable/)
 
@@ -71,6 +69,7 @@ Read the INSTALL.md in the install folder
 * [Bootstrap](https://getbootstrap.com)
 * [AdminLTE](https://almsaeedstudio.com/)
 * [Font Awesome](http://fontawesome.io/)
+
 ## Credit To
 
 * **Lukas Metzger** - Totally ripped some of his Javascript from his [PDNS Manager](https://pdnsmanager.lmitsystems.de/). 
