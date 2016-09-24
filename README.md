@@ -15,21 +15,21 @@ The aim is to provide a fully functional web interface that you can just drop on
 Pretty much everything, currently only part of the DNS Admin stuff works, it is a work in progress.
 
 #### Site Admin
-- [x] Add Domains
-- [x] Edit Domains
-- [x] Delete Domains
-- [x] Add Users
-- [x] Edit Users
-- [x] Delete Users
+- [x] ~~Add Domains~~
+- [x] ~~Edit Domains~~
+- [x] ~~Delete Domains~~
+- [x] ~~Add Users~~
+- [x] ~~Edit Users~~
+- [x] ~~Delete Users~~
 - [ ] Assign Domain to different user
 
 #### Domain Admin
-- [ ] Add Domains
-- [ ] Edit Domains
-- [ ] Delete Domains
-- [ ] Add Users
-- [ ] Edit Users
-- [ ] Delete Users
+- [x] ~~Add Domains~~
+- [x] ~~Edit Domains~~
+- [x] ~~Delete Domains~~
+- [x] ~~Add Users~~
+- [x] ~~Edit Users~~
+- [x] ~~Delete Users~~
 
 #### Domain User
 - [ ] Edit Domain
@@ -38,7 +38,7 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 - [ ] Password Reset
 - [ ] PDNS Stats
 - [ ] Domain and Record Limits (Per User and/or Per Domain)
-- [ ] Tidy Up Plugins Folder
+- [x] ~~Tidy Up Plugins Folder~~
 
 ## Prerequisities
 
