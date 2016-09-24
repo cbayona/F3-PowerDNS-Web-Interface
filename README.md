@@ -44,10 +44,12 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 
 You will need to make sure you have installed and working the following
 
-* PowerDNS (with MySQL backend)
-* Nginx (or Apache) webserver
-* MySQL
-* php5-intl package / php5-idn
+* [PowerDNS}(https://powerdns.com/) (with MySQL backend)
+* [Nginx}(http://nginx.org/) (or Apache) webserver
+* [MySQL](http://dev.mysql.com/downloads/)
+* [PHP5-INTL](http://php.net/manual/en/intl.setup.php) package
+
+Getting these installed and working is beyond the scope of this readme, there are enough tutorials floating around the web (hint, [Google](https://www.google.co.uk) is your friend)
 
 ## Installing
 
@@ -64,6 +66,10 @@ Read the INSTALL.md in the install folder
 * [DataTables](https://datatables.net)
 * [Select2](select2.github.io)
 * [X-Editable](https://vitalets.github.io/x-editable/)
+* [FastClick](https://github.com/ftlabs/fastclick)
+* [iCheck](http://icheck.fronteed.com/)
+* [Input Mask](https://github.com/RobinHerbots/jquery.inputmask)
+* [slimScroll](https://github.com/rochal/jQuery-slimScroll)
 
 **HTML/CSS**
 * [Bootstrap](https://getbootstrap.com)
