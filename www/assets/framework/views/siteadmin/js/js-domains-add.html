@@ -20,6 +20,7 @@ $(document).ready(function() {
             email: $('#email').val(),
             primary: $('#primaryNameserver').val(),
 			adminid: $('#adminid').val(),
+			adminemail: $( "#adminid option:selected" ).text(),
             csrfToken: $('#csrfToken').text()
         };
         $.ajax({

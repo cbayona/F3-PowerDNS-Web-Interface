@@ -90,14 +90,14 @@ class Validate extends Controller {
 		$f3 = Base::instance();
 		if($f3->get('SESSION.adminlevel')) {
 			$adminlevel = $f3->get('SESSION.adminlevel');
-			if($adminlevel >= $requiredlevel) {
+			if($adminlevel = $requiredlevel) {
 				return true;	
 			} else {
 				return false;	
 			}
 		}
-	}	
-
+	}
+	
 	public function genPassword() {
 		$alpha = "abcdefghijklmnopqrstuvwxyz";
 		$alpha_upper = strtoupper($alpha);

@@ -12,19 +12,20 @@ $f3->route('GET /domains','DashboardController->renderViewDomains');
 $f3->route('GET /domains/add','DashboardController->renderAddDomain');
 $f3->route('GET /domains/edit/@DOMAINID','DashboardController->renderEditDomain');
 // Domains AJAX
-$f3->route('POST /ajax/domains/add [ajax]','AjaxController->siteadminajaxadddomain');
-$f3->route('POST /ajax/domains/delete [ajax]','AjaxController->siteadminajaxadeletedomain');
-$f3->route('POST /ajax/records/soaupdate [ajax]','AjaxController->siteadminajaxsoaupdate');
-$f3->route('POST /ajax/records/update [ajax]','AjaxController->siteadminajaxupdaterecord');
-$f3->route('POST /ajax/records/add [ajax]','AjaxController->siteadminajaxaddrecord');
-$f3->route('POST /ajax/records/delete [ajax]','AjaxController->siteadminajaxdeleterecord');
+$f3->route('POST /ajax/domains/add [ajax]','AjaxController->ajaxadddomain');
+$f3->route('POST /ajax/domains/delete [ajax]','AjaxController->ajaxadeletedomain');
+$f3->route('POST /ajax/records/soaupdate [ajax]','AjaxController->ajaxsoaupdate');
+$f3->route('POST /ajax/records/update [ajax]','AjaxController->ajaxupdaterecord');
+$f3->route('POST /ajax/records/add [ajax]','AjaxController->ajaxaddrecord');
+$f3->route('POST /ajax/records/delete [ajax]','AjaxController->ajaxdeleterecord');
 // Users
 $f3->route('GET /users','DashboardController->renderViewUsers');
 $f3->route('GET /users/add','DashboardController->renderAddUser');
 $f3->route('GET /users/edit/@USERID','DashboardController->renderEditUser');
 // Users AJAX
-$f3->route('POST /ajax/users/update [ajax]','AjaxController->siteadminajaxuserupdate');
-$f3->route('POST /ajax/users/add [ajax]','AjaxController->siteadminajaxuseradd');
+$f3->route('POST /ajax/users/update [ajax]','AjaxController->ajaxuserupdate');
+$f3->route('POST /ajax/users/add [ajax]','AjaxController->ajaxuseradd');
+$f3->route('POST /ajax/users/delete [ajax]','AjaxController->ajaxuserdelete');
 
 // General AJAX
 $f3->route('GET /ajax/password [ajax]','AjaxController->newPassword');

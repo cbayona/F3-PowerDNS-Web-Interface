@@ -36,8 +36,8 @@
                   <td>{{ @idn_to_utf8(@dl.name) }}</td>
                   <td class="hidden-xs hidden-sm">{{@dl.type}}</td>
                   <td class="hidden-xs hidden-sm">{{@dl.records}}</td>
-                  <td class="text-right"><a href="/ajax/domains/delete/{{@dl.id}}" class="btn btn-info" role="button"><span class="hidden-xs hidden-sm">Edit&nbsp;&nbsp;</span><i class="fa fa-edit"></i></a></td>
-                  <td class="text-right"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDomainDelete" data-domainid="{{@dl.id}}" data-domainname="{{@dl.name}}"><span class="hidden-xs hidden-sm">Delete&nbsp;&nbsp;</span><span class="fa fa-trash"></span>
+                  <td class="text-center"><a href="/domains/edit/{{@dl.id}}" class="btn btn-info" role="button"><span class="hidden-xs hidden-sm">Edit&nbsp;&nbsp;</span><i class="fa fa-edit"></i></a></td>
+                  <td class="text-center"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDomainDelete" data-domainid="{{@dl.id}}" data-domainname="{{@dl.name}}"><span class="hidden-xs hidden-sm">Delete&nbsp;&nbsp;</span><span class="fa fa-trash"></span>
 </button></td>
                 </tr>
 </repeat>

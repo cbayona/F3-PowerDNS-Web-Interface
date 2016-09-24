@@ -37,6 +37,14 @@
                                 <label for="email" class="control-label">Email</label>
                                 <input name="email" type="text" class="form-control" id="email" placeholder="Email" autocomplete="off" data-regex="^.+@[^.]+(\.[^.]+)*$" tabindex="2">
                             </div>
+                            <div class="form-group">
+                                <label for="adminid" class="control-label">Admin Account</label>
+                                <select name="adminid" id="adminid" class="form-control">
+                                <repeat group="{{@ALLEMAILS}}" value="{{@ae}}">
+                                <option value="{{@ae.userID}}">{{@ae.userEmail}}</option>
+                                </repeat>
+                                </select>
+                            </div>
                         </div>
               </div>
               <!-- /.box-body -->

@@ -94,11 +94,11 @@
 <repeat group="{{@DOMAINRECORDS}}" value="{{@dr}}" counter="{{ @ctr }}">
                 <tr id="row{{@dr.id}}">
                   <td class="hidden-xs hidden-sm">{{@dr.id}}</td>
-                  <td><a href="#" class="editable-type" id="recordtype{{@ctr}}" data-type="select2" data-value="{{@dr.type}}" data-pk="{{@dr.id}}" data-url="/ajax/domains/update" data-linenumber="{{@ctr}}">{{@dr.type}}</a></td>
-                  <td><a href="#" class="editable" data-type="text" data-name="name" data-pk="{{@dr.id}}" <check if="{{ @dr.type=='TXT' }}"><true>data-type="textarea" </true></check><check if="{{ @dr.type=='SPF' }}"><true>data-type="textarea" </true></check>data-url="/ajax/domains/update" data-title="Enter hostname" data-linenumber="{{@ctr}}">{{ @idn_to_utf8(@dr.name) }}</a></td>
-                  <td class="wrap-all-words"><a href="#" class="editable" data-type="text" data-name="content" data-pk="{{@dr.id}}" data-url="/ajax/domains/update" data-title="Enter IP or Hostname" data-linenumber="{{@ctr}}">{{ @idn_to_utf8(@dr.content) }}</a></td>
-                  <td><a href="#" class="editable" data-type="text" data-name="priority" data-pk="{{@dr.id}}" data-url="/ajax/domains/update" data-title="Enter Priority" data-linenumber="{{@ctr}}">{{@dr.prio}}</a></td>
-                  <td><a href="#" class="editable" data-type="text" data-name="ttl" data-pk="{{@dr.id}}" data-url="/ajax/domains/update" data-title="Enter hostname" data-linenumber="{{@ctr}}">{{@dr.ttl}}</a></td>
+                  <td><a href="#" class="editable-type" id="recordtype{{@ctr}}" data-type="select2" data-value="{{@dr.type}}" data-pk="{{@dr.id}}" data-url="/ajax/records/update" data-linenumber="{{@ctr}}" data-recordtype="{{@dr.type}}" data-name="recordtype">{{@dr.type}}</a></td>
+                  <td><a href="#" class="editable" data-type="text" data-name="name" data-pk="{{@dr.id}}" <check if="{{ @dr.type=='TXT' }}"><true>data-type="textarea" </true></check><check if="{{ @dr.type=='SPF' }}"><true>data-type="textarea" </true></check>data-url="/ajax/records/update" data-title="Enter hostname" data-linenumber="{{@ctr}}">{{ @idn_to_utf8(@dr.name) }}</a></td>
+                  <td class="wrap-all-words"><a href="#" class="editable" data-type="text" data-name="content" data-pk="{{@dr.id}}" data-url="/ajax/records/update" data-title="Enter IP or Hostname" data-linenumber="{{@ctr}}">{{ @idn_to_utf8(@dr.content) }}</a></td>
+                  <td><a href="#" class="editable" data-type="text" data-name="priority" data-pk="{{@dr.id}}" data-url="/ajax/records/update" data-title="Enter Priority" data-linenumber="{{@ctr}}">{{@dr.prio}}</a></td>
+                  <td><a href="#" class="editable" data-type="text" data-name="ttl" data-pk="{{@dr.id}}" data-url="/ajax/records/update" data-title="Enter hostname" data-linenumber="{{@ctr}}">{{@dr.ttl}}</a></td>
                   <td>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmRecordDelete" data-recordid="{{@dr.id}}" data-recordname="{{@dr.name}}" data-recordtype="{{@dr.type}}" data-recordcontent="{{@dr.content}}" data-thedomain="{{@DOMAINNAME}}" data-domainid="{{@DOMAINID}}">
   <span class="fa fa-trash"></span>

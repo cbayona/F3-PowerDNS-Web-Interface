@@ -33,15 +33,28 @@ $(document).ready(function() {
     $('.editable').editable({
         params: function(params) {
             var lineid = $(this).data("linenumber");
+			var recordtype = $(this).data("recordtype");
             var data = {};
             data.pk = params.pk;
             data.name = params.name;
             data.value = params.value;
             data.recordtype = $("#recordtype" + lineid).data('value');
+			//data.recordtype = recordtype;
             return data;
         },
     });
     $('.editable-type').editable({
+        params: function(params) {
+            var lineid = $(this).data("linenumber");
+			var recordtype = $(this).data("recordtype");
+            var data = {};
+            data.pk = params.pk;
+            data.name = params.name;
+            data.value = params.value;
+            data.recordtype = $("#recordtype" + lineid).data('value');
+			//data.recordtype = recordtype;
+            return data;
+        },		
         source: [{
             id: 'A',
             text: 'A'

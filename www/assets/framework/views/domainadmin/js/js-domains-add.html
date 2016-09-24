@@ -4,8 +4,11 @@
 <script src="/assets/plugins/fastclick/fastclick.js"></script>
 <!-- Pnotify -->
 <script type="text/javascript" src="/assets/plugins/pnotify/pnotify.js"></script>
+<!-- Select2 -->
+<script src="/assets/plugins/select2/select2.full.min.js"></script>
 <!-- page script -->
 <script>
+$("#adminid").select2();
 PNotify.prototype.options.styling = "bootstrap3";
 $(document).ready(function() {
     $('#addDomainButton').on('click', function() {
@@ -16,6 +19,7 @@ $(document).ready(function() {
             domain: $('#domainName').val(),
             email: $('#email').val(),
             primary: $('#primaryNameserver').val(),
+			adminid: $('#adminid').val(),
             csrfToken: $('#csrfToken').text()
         };
         $.ajax({

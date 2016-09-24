@@ -16,6 +16,7 @@ class UsersController extends Controller{
 
         $users = new Users($this->db);
 		$userlevel = new UserLevel($this->db);
+		$logins = new Logins($this->db);
         $users->getByEmail($email);
 
         if($users->dry()) {
@@ -28,7 +29,10 @@ class UsersController extends Controller{
             $this->f3->set('SESSION.realname', $users->userName);
             $this->f3->set('SESSION.adminlevel', $users->userAdminLevel);
             $this->f3->set('SESSION.adminleveldesc', $userlevel->getLevelDesc($users->userAdminLevel));
-            $this->f3->set('SESSION.userid', $users->userID);			
+			$this->f3->set('SESSION.maxdomains',$users->userMaxDomains);
+            $this->f3->set('SESSION.userid', $users->userID);
+            $this->f3->set('SESSION.masteraccountid', $users->userMasterAccount);
+			$logins->add($users->userID,$this->f3->get('IP'),$this->f3->get('AGENT'),$users->userMasterAccount);
             $this->f3->reroute('/');
 			} else {
 				Flash::instance()->addMessage('Your account is disabled. Please contact your Domain Administrator', 'danger');

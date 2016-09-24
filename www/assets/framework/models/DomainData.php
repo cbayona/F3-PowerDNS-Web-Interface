@@ -20,7 +20,22 @@ class DomainData extends DB\SQL\Mapper{
         $this->load(array('name=?', $domain));
 		return $this->query;
     }
+	
+    public function getByDomainID($domainid) {
+        $this->load(array('domainID=?', $domainid));
+		return $this->query;
+    }
+		
+    public function getByDomainAdmin($adminid) {
+        $this->load(array('domainAdmin=?', $adminid));
+		return $this->query;
+    }
 
+	public function getByDomainIDAndMaster($domainid,$masterid) {
+		$this->load(array('domainID=? AND domainAdmin=?',$domainid,$masterid));
+		return $this->query;		
+	}
+	
     public function add($domainid,$domainhash,$domainadminid) {
         $this->domainID = $domainid;
 		$this->domainHash = $domainhash;
@@ -44,6 +59,10 @@ class DomainData extends DB\SQL\Mapper{
 		return count($this->all());
 	}
 
+	public function countUserDomains($userid) {
+		return count($this->getByDomainAdmin($userid));	
+	}
+
 	public function addDomainData($domainid, $domainname, $domainadminid) {
 		$domainhash = password_hash($domainname, PASSWORD_DEFAULT);
 		$domaindataid = $this->add($domainid,$domainhash,$domainadminid);
@@ -57,6 +76,15 @@ class DomainData extends DB\SQL\Mapper{
 	public function deleteByDomainID($domainid) {
 		$this->load(array('domainID=?',$domainid));
         $this->erase();
+	}
+
+	public function checkIsOwner($domainid,$userid) {
+		$this->getByDomainIDAndMaster($domainid,$userid);	
+		if($this->dry()) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 	
 }
