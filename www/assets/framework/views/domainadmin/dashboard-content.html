@@ -70,41 +70,13 @@
                       </tr>
                       </thead>
                       <tbody>
+					<repeat group="{{@LATESTLOGS}}" value="{{@lg}}">
                       <tr>
-                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                        <td>Call of Duty IV</td>
-                        <td><span class="label label-success">Shipped</span></td>
+                        <td>{{@lg.domainName}}</td>
+                        <td>{{@lg.userEmail}}</td>
+                        <td>{{@lg.action}}: {{@lg.record}}</td>
                       </tr>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                        <td>Samsung Smart TV</td>
-                        <td><span class="label label-warning">Pending</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                        <td>iPhone 6 Plus</td>
-                        <td><span class="label label-danger">Delivered</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                        <td>Samsung Smart TV</td>
-                        <td><span class="label label-info">Processing</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                        <td>Samsung Smart TV</td>
-                        <td><span class="label label-warning">Pending</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                        <td>iPhone 6 Plus</td>
-                        <td><span class="label label-danger">Delivered</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                        <td>Call of Duty IV</td>
-                        <td><span class="label label-success">Shipped</span></td>
-                      </tr>
+					</repeat>
                       </tbody>
                     </table>
                   </div>
@@ -112,8 +84,7 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer clearfix">
-                  <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                  <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Log Changes</a>
                 </div>
                 <!-- /.box-footer -->
               </div>

@@ -9,11 +9,13 @@ class DashboardController extends Controller {
 		$siteadmin = new SiteAdmin($this->db);
 		$validate = new Validate($this->db);
 		$logins = new Logins($this->db);
+		$logs = new BigBrother($this->db);
 		$validate->isLoggedIn($f3);
 		$adminlevel = $this->f3->get('SESSION.adminlevel');
 		$userleveldesc = $this->f3->get('SESSION.adminleveldesc');
 		$userid = $this->f3->get('SESSION.userid');
 		$maxdomains = $this->f3->get('SESSION.maxdomains');
+		$masteraccountid = $this->f3->get('SESSION.masteraccountid');
 		switch ($adminlevel) {
 		case 1:
 			// Domain Admin
@@ -98,8 +100,10 @@ class DashboardController extends Controller {
 			if ($userscount < 1) {
 				$userscount = "0";
 			};
-			$userlogins = $logins->getByMaster($this->f3->get('SESSION.masteraccountid'));
-			$this->f3->set('LOGINS', $userlogins);
+			$latestlogins = $logins->getByMaster($masteraccountid);
+			$latestlogs = $logs->showLastTenMaster($masteraccountid);
+			$this->f3->set('LOGINS', $latestlogins);
+			$this->f3->set('LATESTLOGS', $latestlogs);
 			$this->f3->set('STATSINCLUDE', $urlslug . $userstatsfile);
 			$this->f3->set('PAGECONTENT', $urlslug . 'dashboard-content.html');
 			$this->f3->set('PAGESIDEMENU', $urlslug . 'sidemenu.html');
@@ -109,7 +113,6 @@ class DashboardController extends Controller {
 			$this->f3->set('DOMAINSCOUNT', $userdomainscount);
 			$this->f3->set('USERSCOUNT', $userscount);
 		}
-
 		echo $template->render('page-dashboard.html');
 	}
 

@@ -16,7 +16,7 @@ class BigBrother extends DB\SQL\Mapper{
         return $this->query;
     }
 
-    public function addLogEntry($domainid,$domainname,$userid,$useremail,$action,$record,$masterid) {
+    public function addLogEntry($domainid,$domainname,$userid,$useremail,$action,$record,$masteraccountid) {
 		if(empty($action)) { $action = $domainname; };
 		$this->domainID=$domainid;
 		$this->domainName=$domainname;
@@ -24,8 +24,12 @@ class BigBrother extends DB\SQL\Mapper{
 		$this->userEmail=$useremail;
 		$this->action=$action;
 		$this->record=$record;
-		$this->masterID=$masterid;		
+		$this->masteraccountid=$masteraccountid;		
         $this->save();
 		return $this->id;
     }
+
+	public function showLastTenMaster($masteraccountid) {
+		return $this->db->exec('Select w_logs.action, w_logs.record, w_logs.domainID, w_logs.userID, w_logs.masterID, w_logs.domainName, w_logs.userEmail From w_logs Where w_logs.masterID = ? ORDER BY id ASC LIMIT 10',$masteraccountid);	
+	}
 }
