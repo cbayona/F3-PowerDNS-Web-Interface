@@ -44,8 +44,8 @@ Pretty much everything, currently only part of the DNS Admin stuff works, it is 
 
 You will need to make sure you have installed and working the following
 
-* [PowerDNS}(https://powerdns.com/) (with MySQL backend)
-* [Nginx}(http://nginx.org/) (or Apache) webserver
+* [PowerDNS](https://powerdns.com/) (with MySQL backend)
+* [Nginx](http://nginx.org/) (or Apache) webserver
 * [MySQL](http://dev.mysql.com/downloads/)
 * [PHP5-INTL](http://php.net/manual/en/intl.setup.php) package
 
